@@ -1,0 +1,16 @@
+.task2 {
+  min-width: 1128px;
+  margin-top: 100px;
+  margin-left: 156px;
+  margin-right: 156px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.gallery li {
+  width: calc((100% - 48px) / 3);
+}
