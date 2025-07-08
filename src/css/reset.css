@@ -22,6 +22,7 @@ li {
 a {
   color: currentColor;
   text-decoration: none;
+  /* height: 100%;*/
 }
 
 button {
@@ -29,11 +30,14 @@ button {
   border-style: none;
   border-color: none;
   outline: none;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 img {
   display: block;
-  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 input {

@@ -1,3 +1,6 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const images = [
   {
     preview:
@@ -64,42 +67,22 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('ul.gallery');
+const galleryBox = document.querySelector('ul.gallery');
+
 const markup = images
   .map(
     image => `<li class="gallery-item">
-  <a class="gallery-link" href="${image.original}">
-  <img class="gallery-image" src="${image.preview}" data-source="${image.original}" alt="${image.description}">
-  </a>
+    <a class="gallery-link" href="${image.original}">
+  <img class="gallery-image" src="${image.preview}" alt="${image.description}">
+    </a>
   </li>
   `
   )
   .join('');
 
-gallery.innerHTML = markup;
+galleryBox.innerHTML = markup;
 
-const modalBox = basicLightbox.create(
-  '<img src="" id="large-image" alt="">',
-  {
-    className: 'modal-box',
-    // onShow: () => {
-    //   gallery.addEventListener('click', e => {
-    //     document
-    //       .querySelector('#large-image')
-    //       .setAttribute('src', e.target.dataset.source);
-  } //);
-  /* },
-}
- */
-);
-
-gallery.addEventListener('click', e => {
-  e.preventDefault();
-  if (e.target.nodeName === 'IMG') {
-    console.log(e.target.dataset.source);
-    modalBox.show();
-    document
-      .querySelector('#large-image')
-      .setAttribute('src', e.target.dataset.source);
-  }
+const gallery = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
 });
