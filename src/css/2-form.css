@@ -1,29 +1,78 @@
-.task3 {
+.input-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  height: 136px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 296px;
+  margin: 0 auto;
 }
 
-#name-input {
+.input-form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-form > label:nth-child(2) {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.input-form input {
   border: 1px solid #808080;
   border-radius: 4px;
   width: 360px;
   height: 40px;
+  padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 16px;
 }
-#name-input::placeholder {
+
+.input-form input:hover,
+.input-form textarea:hover {
+  border: 1px solid #000;
+}
+
+.input-form input::placeholder,
+.input-form textarea::placeholder {
+  color: transparent;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
+}
+.input-form input:focus::placeholder,
+.input-form textarea:focus::placeholder {
   color: #2e2f42;
 }
-.task3 > h1 {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 133%;
+
+.input-form textarea {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 80px;
+  resize: none;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+
+.input-form > button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.input-form > button {
+  background-color: #6c8cff;
 }
