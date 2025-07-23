@@ -1,5 +1,5 @@
 const formData = { email: '', message: '' };
-const inputForm = document.querySelector('.input-form');
+const inputForm = document.querySelector('.feedback-form');
 
 inputForm.addEventListener('input', e => {
   formData.email = inputForm.elements.email.value.trim();
