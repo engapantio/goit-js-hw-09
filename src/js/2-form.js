@@ -1,14 +1,13 @@
 let formData = { email: '', message: '' };
 const inputForm = document.querySelector('.feedback-form');
 
-document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('feedback-form-state')) {
     const formDefault = JSON.parse(localStorage.getItem('feedback-form-state'));
     formData = formDefault;
     inputForm.elements.email.value = formData.email;
     inputForm.elements.message.value = formData.message;
   }
-});
+
 
 inputForm.addEventListener('input', () => {
   formData.email = inputForm.elements.email.value.trim();
